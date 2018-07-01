@@ -1,0 +1,75 @@
+
+RewriteBase /
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^airlinespotting\.com$ [NC]  
+RewriteRule ^(.*)$ http://www.airlinespotting.com/$1 [R=301,QSA,L]
+Options +FollowSymLinks
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^asign4/(.*)/(.*)/(.*)/(.*)/page(.*)/(.*)/(.*)$ asign4.php?id=$1&version=$2&com=$3&avi=$4&pg=$5&orden=$6&asc=$7 [QSA,L]
+RewriteRule ^asign3/(.*)/(.*)/(.*)/(.*)/page(.*)/(.*)/(.*)$ asign3.php?id=$1&ord=$2&busca=$3&bsc=$4&pg=$5&orden=$6&asc=$7 [QSA,L]
+RewriteRule ^asign2/(.*)/(.*)/(.*)/(.*)/page(.*)/(.*)/(.*)$ asign2.php?id=$1&ord=$2&busca=$3&bsc=$4&pg=$5&orden=$6&asc=$7 [QSA,L]
+RewriteRule ^asign/(.*)/(.*)/(.*)/(.*)/page(.*)/(.*)/(.*)$ asign.php?id=$1&ord=$2&busca=$3&bsc=$4&pg=$5&orden=$6&asc=$7 [QSA,L]
+RewriteRule ^asign/(.*)$ asign.php?id=$1 [QSA,L]
+RewriteRule ^asigncom/(.*)$ asigncom.php?id=$1 [QSA,L]
+RewriteRule ^asignmodel/(.*)$ asignmodel.php?id=$1 [QSA,L]
+RewriteRule ^search/(.*)/(.*)/(.*)/(.*)/(.*)/page(.*)/(.*)/(.*)$ busqueda.php?id=$1&version=$2&ord=$3&busca=$4&bsc=$5&pg=$6&orden=$7&asc=$8 [QSA,L] 
+RewriteRule ^search/(.*)/(.*)/(.*)/(.*)/(.*)/page(.*)$ busqueda.php?id=$1&version=$2&ord=$3&busca=$4&bsc=$5&pg=$6 [QSA,L] 
+RewriteRule ^search/(.*)/(.*)/(.*)/(.*)/(.*)$ busqueda.php?id=$1&version=$2&ord=$3&busca=$4&bsc=$5 [QSA,L]
+RewriteRule ^search/(.*)/(.*)/(.*)/(.*)$ busqueda.php?id=$1&version=$2&ord=$3&busca=$4 [QSA,L]
+RewriteRule ^search/(.*)/(.*)/(.*)$ busqueda.php?id=$1&version=$2&ord=$3 [QSA,L]
+RewriteRule ^search/(.*)/(.*)$ busqueda.php?id=$1&version=$2 [QSA,L]
+RewriteRule ^search/(.*)$ busqueda.php?id=$1 [QSA,L]
+RewriteRule ^image/(.*)/(.*)/(.*)$ ventanafoto.php?id=$1&version=$2&idft=$3 [QSA,L]
+RewriteRule ^image/(.*)/(.*)$ ventanafoto.php?id=$1&idft=$2 [QSA,L]
+RewriteRule ^az/(.*)/(.*)/(.*)$ az.php?id=$1&version=$2&let=$3 [QSA,L]
+RewriteRule ^az/(.*)/(.*)$ az.php?id=$1&let=$2 [QSA,L]
+RewriteRule ^confirm/(.*)/(.*)/(.*)$ confirm.php?id=$1&version=$2&eme=$3 [QSA,L]
+RewriteRule ^company/(.*)/(.*)/(.*)$ company.php?id=$1&version=$2&name=$3 [QSA,L]
+RewriteRule ^company/(.*)/(.*)$ company.php?id=$1&name=$2 [QSA,L]
+RewriteRule ^gallery/(.*)/(.*)/(.*)/(.*)/page(.*)/(.*)/(.*)$ galeria.php?id=$1&version=$2&com=$3&avi=$4&pg=$5&orden=$6&asc=$7 [QSA,L]
+RewriteRule ^gallery/(.*)/(.*)/(.*)/(.*)/page(.*)$ galeria.php?id=$1&version=$2&com=$3&avi=$4&pg=$5 [QSA,L]
+RewriteRule ^gallery/(.*)/(.*)/(.*)/page(.*)$ galeria.php?id=$1&com=$2&avi=$3&pg=$4 [QSA,L]
+RewriteRule ^gallery/(.*)/(.*)/(.*)/(.*)$ galeria.php?id=$1&version=$2&com=$3&avi=$4 [QSA,L]
+RewriteRule ^gallery/(.*)/(.*)/(.*)$ galeria.php?id=$1&com=$2&avi=$3 [QSA,L]
+RewriteRule ^editar6/(.*)/(.*)/(.*)$ editar6.php?id=$1&version=$2&editado=$3 [QSA,L]
+RewriteRule ^editar5/(.*)/(.*)/(.*)$ editar5.php?id=$1&version=$2&editado=$3 [QSA,L]
+RewriteRule ^editar4/(.*)/(.*)/(.*)$ editar4.php?id=$1&version=$2&editado=$3 [QSA,L]
+RewriteRule ^editar3/(.*)/(.*)/(.*)$ editar3.php?id=$1&version=$2&editado=$3 [QSA,L]
+RewriteRule ^editar2/(.*)/(.*)/(.*)$ editar2.php?id=$1&version=$2&editado=$3 [QSA,L]
+RewriteRule ^editar/(.*)/(.*)/(.*)$ editar.php?id=$1&version=$2&editado=$3 [QSA,L]
+RewriteRule ^borrar6/(.*)/(.*)/(.*)$ borrar6.php?id=$1&version=$2&borrado=$3 [QSA,L]
+RewriteRule ^borrar5/(.*)/(.*)/(.*)$ borrar5.php?id=$1&version=$2&borrado=$3 [QSA,L]
+RewriteRule ^borrar4/(.*)/(.*)/(.*)$ borrar4.php?id=$1&version=$2&borrado=$3 [QSA,L]
+RewriteRule ^borrar3/(.*)/(.*)/(.*)$ borrar3.php?id=$1&version=$2&borrado=$3 [QSA,L]
+RewriteRule ^borrar2/(.*)/(.*)/(.*)$ borrar2.php?id=$1&version=$2&borrado=$3 [QSA,L]
+RewriteRule ^borrar/(.*)/(.*)/(.*)$ borrar.php?id=$1&version=$2&borrado=$3 [QSA,L]
+RewriteRule ^cookies/(.*)/(.*)$ cookies.php?id=$1&version=$2 [QSA,L]
+RewriteRule ^cookies/(.*)$ cookies.php?id=$1 [QSA,L]
+RewriteRule ^terms/(.*)/(.*)$ terms.php?id=$1&version=$2 [QSA,L]
+RewriteRule ^terms/(.*)$ terms.php?id=$1 [QSA,L]
+RewriteRule ^register/(.*)/(.*)$ register.php?id=$1&version=$2 [QSA,L]
+RewriteRule ^register/(.*)$ register.php?id=$1 [QSA,L]
+RewriteRule ^forgot/(.*)/(.*)$ forgot.php?id=$1&version=$2 [QSA,L]
+RewriteRule ^forgot/(.*)$ forgot.php?id=$1 [QSA,L]
+RewriteRule ^logout/(.*)/(.*)$ logout.php?id=$1&version=$2 [QSA,L]
+RewriteRule ^logout/(.*)$ logout.php?id=$1 [QSA,L]
+RewriteRule ^login/(.*)/(.*)$ login.php?id=$1&version=$2 [QSA,L]
+RewriteRule ^login/(.*)$ login.php?id=$1 [QSA,L]
+RewriteRule ^links/(.*)/(.*)$ links.php?id=$1&version=$2 [QSA,L]
+RewriteRule ^links/(.*)$ links.php?id=$1 [QSA,L]
+RewriteRule ^contact/(.*)/(.*)$ contact.php?id=$1&version=$2 [QSA,L]
+RewriteRule ^contact/(.*)$ contact.php?id=$1 [QSA,L]
+RewriteRule ^index/(.*)/(.*)/(.*)$ index.php?id=$1&vis=$2&version=$3 [QSA,L]
+RewriteRule ^index/(.*)/(.*)$ index.php?id=$1&version=$2 [QSA,L]
+RewriteRule ^index/(.*)$ index.php?id=$1 [QSA,L]
+
+
+
+
+
+<FilesMatch "\.(ttf|otf|eot)$">
+    <IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    </IfModule>
+</FilesMatch>
