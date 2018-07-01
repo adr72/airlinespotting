@@ -1,3 +1,3 @@
 # airlinespotting
-Programacio de la Web de airlinespotting.com
+Programación de la Web de airlinespotting.com
 
